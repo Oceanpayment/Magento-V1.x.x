@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category	Oceanpayment
+ * @package 	Oceanpayment_InstantTransfer
+ */
+-->
+<config>
+    <modules>
+        <Oceanpayment_OPInstantTransfer>
+            <version>1.7.1</version>
+        </Oceanpayment_OPInstantTransfer>
+    </modules>
+    <global>
+		  <helpers>
+		  	   <opinstanttransfer>
+		  	   	   <class>Oceanpayment_OPInstantTransfer_Helper</class>
+		  	   </opinstanttransfer>
+		  </helpers>	
+        <models>
+            <opinstanttransfer>
+                <class>Oceanpayment_OPInstantTransfer_Model</class>
+                <resourceModel>opinstanttransfer_mysql4</resourceModel>
+            </opinstanttransfer>
+            <opinstanttransfer_mysql4>
+                <class>Oceanpayment_OPInstantTransfer_Model_Mysql4</class>
+                <entities>
+                    <api_debug><table>opinstanttransfer_api_debug</table></api_debug>
+                </entities>
+            </opinstanttransfer_mysql4>
+        </models>
+        <resources>
+            <opinstanttransfer_setup>
+                <setup>
+                    <module>Oceanpayment_OPInstantTransfer</module>
+                    <class>Oceanpayment_OPInstantTransfer_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </opinstanttransfer_setup>
+            <opinstanttransfer_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </opinstanttransfer_write>
+            <opinstanttransfer_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </opinstanttransfer_read>
+        </resources>
+        <blocks>
+            <opinstanttransfer><class>Oceanpayment_OPInstantTransfer_Block</class></opinstanttransfer>
+    	</blocks>
+        <payment>
+            <opinstanttransfer_payment>
+                <languages>
+                    <FR>
+                        <code>FR</code>
+                        <name>Français</name>
+                    </FR>
+                    <EN>
+                        <code>EN</code>
+                        <name>Anglais</name>
+                    </EN>
+                    <ES>
+                        <code>ES</code>
+                        <name>Espagnol</name>
+                    </ES>
+                    <DE>
+                        <code>DE</code>
+                        <name>Allemand</name>
+                    </DE>
+                    <IT>
+                        <code>IT</code>
+                        <name>Italien</name>
+                    </IT>
+                    <NL>
+                        <code>NL</code>
+                        <name>Néerlandais</name>
+                    </NL>
+                </languages>
+            </opinstanttransfer_payment>
+        </payment>
+    </global>
+    <frontend>
+        <secure_url>
+            <opinstanttransfer_payment>/opinstanttransfer/payment</opinstanttransfer_payment>
+        </secure_url>
+        <routers>
+            <opinstanttransfer>
+                <use>standard</use>
+                <args>
+                    <module>Oceanpayment_OPInstantTransfer</module>
+                    <frontName>opinstanttransfer</frontName>
+                </args>
+            </opinstanttransfer>
+        </routers>
+        <translate>
+            <modules>
+                <Oceanpayment_OPInstantTransfer>
+                    <files>
+                        <default>Oceanpayment_OPInstantTransfer.csv</default>
+                    </files>
+                </Oceanpayment_OPInstantTransfer>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <opinstanttransfer>
+                    <file>opinstanttransfer.xml</file>
+                </opinstanttransfer>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Oceanpayment_OPInstantTransfer>
+                    <files>
+                        <default>Oceanpayment_OPInstantTransfer.csv</default>
+                    </files>
+                </Oceanpayment_OPInstantTransfer>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <payment>
+            <oceanpayment_instanttransfer>
+                  <model>opinstanttransfer/payment</model>
+                  <title>InstantTransfer</title>
+                  <allowspecific>0</allowspecific>
+                  <transaction_type>0</transaction_type>
+            </oceanpayment_instanttransfer>
+        </payment>
+    </default>
+</config>
