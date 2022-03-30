@@ -1,0 +1,7 @@
+//Oceanpayment qiwi专用参数
+if($_POST['payment']['method'] == 'oceanpayment_qiwi'){
+    $_SESSION['opqiwi_pay_countryCode'] = isset($_POST['pay_countryCode']) ? $_POST['pay_countryCode'] : '';
+}
+if($_POST['payment']['method'] == 'oceanpayment_qiwi'){
+    $_SESSION['opqiwi_pay_userName'] = isset($_POST['pay_userName']) ? $_POST['pay_userName'] : '';
+}
