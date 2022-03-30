@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category	Oceampayment
+ * @package 	Oceanpayment_Alipay
+ */
+-->
+<config>
+    <modules>
+        <Oceanpayment_OPAlipay>
+            <version>1.6.0</version>
+        </Oceanpayment_OPAlipay>
+    </modules>
+    <global>
+		  <helpers>
+		  	   <opalipay>
+		  	   	   <class>Oceanpayment_OPAlipay_Helper</class>
+		  	   </opalipay>
+		  </helpers>	
+        <models>
+            <opalipay>
+                <class>Oceanpayment_OPAlipay_Model</class>
+                <resourceModel>opalipay_mysql4</resourceModel>
+            </opalipay>
+            <opalipay_mysql4>
+                <class>Oceanpayment_OPAlipay_Model_Mysql4</class>
+                <entities>
+                    <api_debug><table>opalipay_api_debug</table></api_debug>
+                </entities>
+            </opalipay_mysql4>
+        </models>
+        <resources>
+            <opalipay_setup>
+                <setup>
+                    <module>Oceanpayment_OPAlipay</module>
+                    <class>Oceanpayment_OPAlipay_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </opalipay_setup>
+            <opalipay_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </opalipay_write>
+            <opalipay_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </opalipay_read>
+        </resources>
+        <blocks>
+            <opalipay><class>Oceanpayment_OPAlipay_Block</class></opalipay>
+    	</blocks>
+        <payment>
+            <opalipay_payment>
+                <languages>
+                    <FR>
+                        <code>FR</code>
+                        <name>Français</name>
+                    </FR>
+                    <EN>
+                        <code>EN</code>
+                        <name>Anglais</name>
+                    </EN>
+                    <ES>
+                        <code>ES</code>
+                        <name>Espagnol</name>
+                    </ES>
+                    <DE>
+                        <code>DE</code>
+                        <name>Allemand</name>
+                    </DE>
+                    <IT>
+                        <code>IT</code>
+                        <name>Italien</name>
+                    </IT>
+                    <NL>
+                        <code>NL</code>
+                        <name>Néerlandais</name>
+                    </NL>
+                </languages>
+            </opalipay_payment>
+        </payment>
+    </global>
+    <frontend>
+        <secure_url>
+            <opalipay_payment>/opalipay/payment</opalipay_payment>
+        </secure_url>
+        <routers>
+            <opalipay>
+                <use>standard</use>
+                <args>
+                    <module>Oceanpayment_OPAlipay</module>
+                    <frontName>opalipay</frontName>
+                </args>
+            </opalipay>
+        </routers>
+        <translate>
+            <modules>
+                <Oceanpayment_OPAlipay>
+                    <files>
+                        <default>Oceanpayment_OPAlipay.csv</default>
+                    </files>
+                </Oceanpayment_OPAlipay>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <opalipay>
+                    <file>opalipay.xml</file>
+                </opalipay>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Oceanpayment_OPAlipay>
+                    <files>
+                        <default>Oceanpayment_OPAlipay.csv</default>
+                    </files>
+                </Oceanpayment_OPAlipay>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <payment>
+            <oceanpayment_alipay>
+                  <model>opalipay/payment</model>
+                  <title>Alipay</title>
+                  <allowspecific>0</allowspecific>
+                  <transaction_type>0</transaction_type>
+            </oceanpayment_alipay>
+        </payment>
+    </default>
+</config>
