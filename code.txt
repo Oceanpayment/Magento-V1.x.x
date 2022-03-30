@@ -1,4 +1,0 @@
-//POLi÷ß∏∂
-if($_POST['payment']['method'] == 'oceanpayment_poli'){
-    $_SESSION['pay_countryCode'] = isset($_POST['pay_countryCode']) ? $_POST['pay_countryCode'] : '';
-}
