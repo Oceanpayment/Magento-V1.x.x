@@ -1,0 +1,58 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category	Oceanpayment
+ */
+?>
+
+<div class="form-divst">
+	<img style="height:40px" src="<?php echo $this->getSkinUrl('images/op_boleto/op_boleto.png') ?>" />
+</div>
+<?php $_code = $this->getMethodCode(); ?>
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display: none;" >
+  <li>
+    <div class="input-box">
+        <select id="pay_type" name="payment[pay_type]" class="required-entry" onchange="changeType(this.value)" onblur="changeType(this.value)" >
+          <option value="CPF">CPF</option>
+          <option value="CNPJ">CNPJ</option>
+        </select>
+    </div>
+  </li> 
+  <li>
+    <label for="pay_userName" class="required" ><em>*</em><?php echo $this->__('Nome completo') ?></label>
+    <div class="input-box">
+      <input type="text" id="pay_userName" maxlength="50" name="payment[pay_userName]"  class="input-text required-entry" />
+    </div>
+  </li>   
+  <li>
+    <label for="pay_email" class="required" ><em>*</em><?php echo $this->__('Endereço de e-mail completo') ?></label>
+    <div class="input-box">
+      <input type="text" id="pay_email" maxlength="50" name="payment[pay_email]"  class="input-text required-entry" />
+    </div>
+  </li>
+  <li id="pay_cnpj_div" style="display: none;" >
+    <label for="pay_cnpj" class="required"><em>*</em><?php echo $this->__('CNPJ') ?></label>
+    <div class="input-box">
+      <input type="text" id="pay_cnpj" maxlength="18" value="1" name="payment[pay_cnpj]" onkeyup="checkcnpj()" onblur="checkcnpj()" class="input-text required-entry" />
+    </div>
+  </li> 
+  <li>
+    <label for="pay_cpf" class="required"><em>*</em><?php echo $this->__('CPF') ?></label>
+    <div class="input-box">
+      <input type="text" id="pay_cpf" maxlength="14" name="payment[pay_cpf]" onkeyup="checkcpf()" onblur="checkcpf()" class="input-text required-entry" />
+    </div>
+  </li>
+  <input type="hidden" id="pay_cnpj_pass" value="1" maxlength="1" name="payment[pay_cnpj_pass]"  />
+  <input type="hidden" id="pay_cpf_pass" value="0" maxlength="1" name="payment[pay_cpf_pass]"  />
+</ul>
