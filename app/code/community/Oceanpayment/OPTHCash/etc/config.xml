@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category	Oceanpayment
+ * @package 	Oceanpayment_THCash
+ */
+-->
+<config>
+    <modules>
+        <Oceanpayment_OPTHCash>
+            <version>1.7.1</version>
+        </Oceanpayment_OPTHCash>
+    </modules>
+    <global>
+		  <helpers>
+		  	   <opthcash>
+		  	   	   <class>Oceanpayment_OPTHCash_Helper</class>
+		  	   </opthcash>
+		  </helpers>	
+        <models>
+            <opthcash>
+                <class>Oceanpayment_OPTHCash_Model</class>
+                <resourceModel>opthcash_mysql4</resourceModel>
+            </opthcash>
+            <opthcash_mysql4>
+                <class>Oceanpayment_OPTHCash_Model_Mysql4</class>
+                <entities>
+                    <api_debug><table>opthcash_api_debug</table></api_debug>
+                </entities>
+            </opthcash_mysql4>
+        </models>
+        <resources>
+            <opthcash_setup>
+                <setup>
+                    <module>Oceanpayment_OPTHCash</module>
+                    <class>Oceanpayment_OPTHCash_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </opthcash_setup>
+            <opthcash_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </opthcash_write>
+            <opthcash_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </opthcash_read>
+        </resources>
+        <blocks>
+            <opthcash><class>Oceanpayment_OPTHCash_Block</class></opthcash>
+    	</blocks>
+        <payment>
+            <opthcash_payment>
+                <languages>
+                    <FR>
+                        <code>FR</code>
+                        <name>Français</name>
+                    </FR>
+                    <EN>
+                        <code>EN</code>
+                        <name>Anglais</name>
+                    </EN>
+                    <ES>
+                        <code>ES</code>
+                        <name>Espagnol</name>
+                    </ES>
+                    <DE>
+                        <code>DE</code>
+                        <name>Allemand</name>
+                    </DE>
+                    <IT>
+                        <code>IT</code>
+                        <name>Italien</name>
+                    </IT>
+                    <NL>
+                        <code>NL</code>
+                        <name>Néerlandais</name>
+                    </NL>
+                </languages>
+            </opthcash_payment>
+        </payment>
+    </global>
+    <frontend>
+        <secure_url>
+            <opthcash_payment>/opthcash/payment</opthcash_payment>
+        </secure_url>
+        <routers>
+            <opthcash>
+                <use>standard</use>
+                <args>
+                    <module>Oceanpayment_OPTHCash</module>
+                    <frontName>opTHCash</frontName>
+                </args>
+            </opthcash>
+        </routers>
+        <translate>
+            <modules>
+                <Oceanpayment_OPTHCash>
+                    <files>
+                        <default>Oceanpayment_OPTHCash.csv</default>
+                    </files>
+                </Oceanpayment_OPTHCash>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <opthcash>
+                    <file>opthcash.xml</file>
+                </opthcash>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Oceanpayment_OPTHCash>
+                    <files>
+                        <default>Oceanpayment_OPTHCash.csv</default>
+                    </files>
+                </Oceanpayment_OPTHCash>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <payment>
+            <oceanpayment_thcash>
+                  <model>opthcash/payment</model>
+                  <title>THCash</title>
+                  <allowspecific>0</allowspecific>
+                  <transaction_type>0</transaction_type>
+            </oceanpayment_thcash>
+        </payment>
+    </default>
+</config>
