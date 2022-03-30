@@ -1,0 +1,46 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category	Oceanpayment
+ * @package 	Oceanpayment_TrustPay
+ */
+?>
+
+<div class="form-divst">
+	<img style="height:40px" src="<?php echo $this->getSkinUrl('images/op_trustpay/op_trustpay.png') ?>" />
+</div>
+<?php $_code = $this->getMethodCode(); ?>
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display: none;" >
+      <li>
+      		<label for="pay_countryCode" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
+	      	<div class="input-box">
+	           <select name="pay_countryCode" id="pay_countryCode" >
+	           	 <option value="AU"><?php echo $this->__('Australia') ?></option>
+                 <option value="NZ"><?php echo $this->__('New Zealand') ?></option>
+                 <option value="SK"><?php echo $this->__('Slovakia') ?></option>
+                 <option value="EE"><?php echo $this->__('Estonia') ?></option>
+                 <option value="SI"><?php echo $this->__('Slovenia') ?></option>
+                 <option value="BA"><?php echo $this->__('Bosnia and Herzegovina') ?></option>
+                 <option value="LT"><?php echo $this->__('Lithuania') ?></option>
+                 <option value="BG"><?php echo $this->__('Bulgaria') ?></option>
+                 <option value="LV"><?php echo $this->__('Latvia') ?></option>                 
+                 <option value="CZ"><?php echo $this->__('Czech Republic') ?></option>
+                 <option value="PL"><?php echo $this->__('Poland') ?></option>
+                 <option value="RO"><?php echo $this->__('Romania') ?></option>
+                 <option value="HR"><?php echo $this->__('Croatia') ?></option>
+                 <option value="HU"><?php echo $this->__('Hungary') ?></option>                 
+	           </select>
+	      	</div>
+      </li>
+</ul>

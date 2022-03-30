@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category	Oceampayment
+ * @package 	Oceanpayment_TrustPay
+ */
+-->
+<config>
+    <modules>
+        <Oceanpayment_OPTrustPay>
+            <version>1.7.1</version>
+        </Oceanpayment_OPTrustPay>
+    </modules>
+    <global>
+		  <helpers>
+		  	   <optrustpay>
+		  	   	   <class>Oceanpayment_OPTrustPay_Helper</class>
+		  	   </optrustpay>
+		  </helpers>	
+        <models>
+            <optrustpay>
+                <class>Oceanpayment_OPTrustPay_Model</class>
+                <resourceModel>optrustpay_mysql4</resourceModel>
+            </optrustpay>
+            <optrustpay_mysql4>
+                <class>Oceanpayment_OPTrustPay_Model_Mysql4</class>
+                <entities>
+                    <api_debug><table>optrustpay_api_debug</table></api_debug>
+                </entities>
+            </optrustpay_mysql4>
+        </models>
+        <resources>
+            <optrustpay_setup>
+                <setup>
+                    <module>Oceanpayment_OPTrustPay</module>
+                    <class>Oceanpayment_OPTrustPay_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </optrustpay_setup>
+            <optrustpay_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </optrustpay_write>
+            <optrustpay_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </optrustpay_read>
+        </resources>
+        <blocks>
+            <optrustpay><class>Oceanpayment_OPTrustPay_Block</class></optrustpay>
+    	</blocks>
+        <payment>
+            <optrustpay_payment>
+                <languages>
+                    <FR>
+                        <code>FR</code>
+                        <name>Français</name>
+                    </FR>
+                    <EN>
+                        <code>EN</code>
+                        <name>Anglais</name>
+                    </EN>
+                    <ES>
+                        <code>ES</code>
+                        <name>Espagnol</name>
+                    </ES>
+                    <DE>
+                        <code>DE</code>
+                        <name>Allemand</name>
+                    </DE>
+                    <IT>
+                        <code>IT</code>
+                        <name>Italien</name>
+                    </IT>
+                    <NL>
+                        <code>NL</code>
+                        <name>Néerlandais</name>
+                    </NL>
+                </languages>
+            </optrustpay_payment>
+        </payment>
+    </global>
+    <frontend>
+        <secure_url>
+            <optrustpay_payment>/optrustpay/payment</optrustpay_payment>
+        </secure_url>
+        <routers>
+            <optrustpay>
+                <use>standard</use>
+                <args>
+                    <module>Oceanpayment_OPTrustPay</module>
+                    <frontName>optrustpay</frontName>
+                </args>
+            </optrustpay>
+        </routers>
+        <translate>
+            <modules>
+                <Oceanpayment_OPTrustPay>
+                    <files>
+                        <default>Oceanpayment_OPTrustPay.csv</default>
+                    </files>
+                </Oceanpayment_OPTrustPay>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <optrustpay>
+                    <file>optrustpay.xml</file>
+                </optrustpay>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Oceanpayment_OPTrustPay>
+                    <files>
+                        <default>Oceanpayment_OPTrustPay.csv</default>
+                    </files>
+                </Oceanpayment_OPTrustPay>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <payment>
+            <oceanpayment_trustpay>
+                  <model>optrustpay/payment</model>
+                  <title>TrustPay</title>
+                  <allowspecific>0</allowspecific>
+                  <transaction_type>0</transaction_type>
+            </oceanpayment_trustpay>
+        </payment>
+    </default>
+</config>

@@ -1,0 +1,4 @@
+//TrustPay÷ß∏∂
+if($_POST['payment']['method'] == 'oceanpayment_trustpay'){
+    $_SESSION['optrustpay_pay_countryCode'] = isset($_POST['pay_countryCode']) ? $_POST['pay_countryCode'] : '';
+}
