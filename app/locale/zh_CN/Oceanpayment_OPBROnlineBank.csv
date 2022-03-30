@@ -1,0 +1,48 @@
+"后台配置的语言包","后台配置的语言包"
+"Oceanpayment BROnlineBank Payment","Oceanpayment BROnlineBank Payment"
+"Enabled","Enabled"
+"Title","Title"
+"Account","Account"
+"Terminal","Terminal"
+"SecureCode","SecureCode"
+"Transport URL","Transport URL"
+"New order status","New order status"
+"Order status when payment success by BROnlineBank","Order status when payment success by BROnlineBank"
+"Order status when payment failure by BROnlineBank","Order status when payment failure by BROnlineBank"
+"Order status when payment Pending by BROnlineBank","Order status when payment Pending by BROnlineBank"
+"Send Order Email","Send Order Email"
+"Payment from applicable countries","Payment from applicable countries"
+"Payment from Specific countries","Payment from Specific countries"
+"Sort order","Sort order"
+
+
+"选择支付方式的语言包","选择支付方式的语言包"
+"Country","Country"
+"Enter your phone","Enter your phone"
+"Russian Federation(+7)","Russian Federation(+7)"
+"Kazakhstan(+77)","Kazakhstan(+77)"
+"Ukraine(+380)","Ukraine(+380)"
+"Brazil(+55)","Brazil(+55)"
+"Argentina(+54)","Argentina(+54)"
+"Colombia(+57)","Colombia(+57)"
+"Panama(+507)","Panama(+507)"
+"India(+91)","India(+91)"
+"South Africa(+27)","South Africa(+27)"
+
+
+
+"失败页面的语言包","失败页面的语言包"
+"Oops! We're sorry","Oops! We're sorry"
+"Error Messages: ","Error Messages: "
+"Your Order No. is ","Your Order No. is "
+"Please <a href='%s'>continue shopping</a>.","Please <a href='%s'>continue shopping</a>."
+
+
+
+"成功页面的语言包","成功页面的语言包"
+"Your payment is succeed!Your order has been received","Your payment is succeed!Your order has been received"
+
+
+"待处理页面的语言包","待处理页面的语言包"
+"Pending...","Pending..."
+"Notice Messages: ","Notice Messages: "
