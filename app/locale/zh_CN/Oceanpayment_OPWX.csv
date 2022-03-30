@@ -1,0 +1,37 @@
+"后台配置的语言包","后台配置的语言包"
+"Oceanpayment WX Payment","Oceanpayment WX Payment"
+"Enabled","Enabled"
+"Title","Title"
+"Account","Account"
+"Terminal","Terminal"
+"SecureCode","SecureCode"
+"Transport URL","Transport URL"
+"New order status","New order status"
+"Order status when payment success by WX","Order status when payment success by WX"
+"Order status when payment failure by WX","Order status when payment failure by WX"
+"Order status when payment pending by WX","Order status when payment pending by WX"
+"Send Order Email","Send Order Email"
+"Payment from applicable countries","Payment from applicable countries"
+"Payment from Specific countries","Payment from Specific countries"
+"Sort order","Sort order"
+
+
+"选择支付方式的语言包","选择支付方式的语言包"
+"CFP / CNPJ","CFP / CNPJ"
+
+
+"失败页面的语言包","失败页面的语言包"
+"Oops! We're sorry","Oops! We're sorry"
+"Error Messages: ","Error Messages: "
+"Your Order No. is ","Your Order No. is "
+"Please <a href='%s'>continue shopping</a>.","Please <a href='%s'>continue shopping</a>."
+
+
+
+"成功页面的语言包","成功页面的语言包"
+"Your payment is succeed!Your order has been received","Your payment is succeed!Your order has been received"
+
+
+"待处理页面的语言包","待处理页面的语言包"
+"Pending...","Pending..."
+"Notice Messages: ","Notice Messages: "
