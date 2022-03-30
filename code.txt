@@ -1,7 +1,0 @@
-//Oceanpayment BR_OnlineBank专用参数
-  if($_POST['payment']['method'] == 'oceanpayment_bronlinebank'){
-      $_SESSION['opbronlinebank_pay_bankCode'] = isset($_POST['pay_bankCode']) ? $_POST['pay_bankCode'] : '';
-  }
-  if($_POST['payment']['method'] == 'oceanpayment_bronlinebank'){
-     $_SESSION['opbronlinebank_pay_cpf'] = isset($_POST['pay_cpf']) ? $_POST['pay_cpf'] : '';
-  }
