@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category	Oceampayment
+ * @package 	Oceanpayment_UnionPay
+ * @copyright	Copyright (c) 2021 Oceanpayment,LLC. (http://www.oceampayment.com)
+ */
+-->
+<config>
+    <modules>
+        <Oceanpayment_OPUnionPay>
+            <version>1.9.2</version>
+        </Oceanpayment_OPUnionPay>
+    </modules>
+    <global>
+		  <helpers>
+		  	   <opunionpay>
+		  	   	   <class>Oceanpayment_OPUnionPay_Helper</class>
+		  	   </opunionpay>
+		  </helpers>	
+        <models>
+            <opunionpay>
+                <class>Oceanpayment_OPUnionPay_Model</class>
+                <resourceModel>opunionpay_mysql4</resourceModel>
+            </opunionpay>
+            <opunionpay_mysql4>
+                <class>Oceanpayment_OPUnionPay_Model_Mysql4</class>
+                <entities>
+                    <api_debug><table>opunionpay_api_debug</table></api_debug>
+                </entities>
+            </opunionpay_mysql4>
+        </models>
+        <resources>
+            <opunionpay_setup>
+                <setup>
+                    <module>Oceanpayment_OPUnionPay</module>
+                    <class>Oceanpayment_OPUnionPay_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </opunionpay_setup>
+            <opunionpay_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </opunionpay_write>
+            <opunionpay_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </opunionpay_read>
+        </resources>
+        <blocks>
+            <opunionpay><class>Oceanpayment_OPUnionPay_Block</class></opunionpay>
+    	</blocks>
+        <payment>
+            <opunionpay_payment>
+                <languages>
+                    <FR>
+                        <code>FR</code>
+                        <name>Français</name>
+                    </FR>
+                    <EN>
+                        <code>EN</code>
+                        <name>Anglais</name>
+                    </EN>
+                    <ES>
+                        <code>ES</code>
+                        <name>Espagnol</name>
+                    </ES>
+                    <DE>
+                        <code>DE</code>
+                        <name>Allemand</name>
+                    </DE>
+                    <IT>
+                        <code>IT</code>
+                        <name>Italien</name>
+                    </IT>
+                    <NL>
+                        <code>NL</code>
+                        <name>Néerlandais</name>
+                    </NL>
+                </languages>
+            </opunionpay_payment>
+        </payment>
+    </global>
+    <frontend>
+        <secure_url>
+            <opunionpay_payment>/opunionpay/payment</opunionpay_payment>
+        </secure_url>
+        <routers>
+            <opunionpay>
+                <use>standard</use>
+                <args>
+                    <module>Oceanpayment_OPUnionPay</module>
+                    <frontName>opunionpay</frontName>
+                </args>
+            </opunionpay>
+        </routers>
+        <translate>
+            <modules>
+                <Oceanpayment_OPUnionPay>
+                    <files>
+                        <default>Oceanpayment_OPUnionPay.csv</default>
+                    </files>
+                </Oceanpayment_OPUnionPay>
+            </modules>
+        </translate>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Oceanpayment_OPUnionPay>
+                    <files>
+                        <default>Oceanpayment_OPUnionPay.csv</default>
+                    </files>
+                </Oceanpayment_OPUnionPay>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <payment>
+            <oceanpayment_unionpay>
+                  <model>opunionpay/payment</model>
+                  <title>UnionPay</title>
+                  <allowspecific>0</allowspecific>
+                  <transaction_type>0</transaction_type>
+                  <order_status>pending</order_status>
+                  <order_status_payment_accepted>processing</order_status_payment_accepted>
+                  <order_status_payment_refused>pending</order_status_payment_refused>
+                  <order_status_payment_pending>processing</order_status_payment_pending>
+                  <order_status_payment_risk>pending</order_status_payment_risk>
+                  <iframe_height>800</iframe_height>
+                  <send_email>1</send_email>
+                  <automatic_invoice>1</automatic_invoice>
+            </oceanpayment_unionpay>
+        </payment>
+    </default>
+</config>
