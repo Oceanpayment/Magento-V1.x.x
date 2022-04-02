@@ -11,6 +11,10 @@ Magento是一套专业开源的电子商务系统。Magento设计得非常灵活
 <h4 style="color: #02993B;">安装</h4>
 <ol>
   <li>将下载的文件覆盖到magento网站根目录。</li>
+     <ul>
+        <li>将下载的文件覆盖到magento网站根目录。把文件夹op_creditcard复制到网站正在使用的模板路径中，例如：app\design\frontend\网站正在使用的模板名\default\template\op_creditcard</li>
+         <li>文件夹images也需要复制到正在使用的模板路径中，例如：skin\frontend\正在使用的模板名\default\images</li>
+    </ul>
   <li>清除magento后台缓存。</li>
   <li>进入配置System-> Configuration-> Payment Methods</li>
 </ol>
