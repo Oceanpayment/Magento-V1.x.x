@@ -211,7 +211,7 @@ class Oceanpayment_OPAlipay_Model_Payment extends Mage_Payment_Model_Method_Abst
 		//收货人邮编
 		$parameter['ship_zip']			= $shipping->getPostcode();
 		//产品名称
-		$parameter['productName']		= $productDetails['productName'];
+		$parameter['productName']		= substr($productDetails['productName'],0,256);
 		//产品SKU
 		$parameter['productSku']		= $productDetails['productSku'];
 		//产品数量
