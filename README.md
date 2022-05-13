@@ -11,7 +11,7 @@ Magento is a professional open source e-commerce system. Magento is designed to 
 <ol>
     <li>Overwrite the downloaded file to the root directory of the magento website. 
       <ul>
-        <li>Overwrite the downloaded file to the root directory of the Magento website and copy the “op_creditcard” folder to the template path in use by the website. For example, app\design\frontend\template-name-in-use-by-the-website\ default\template\op_creditcard.
+        <li>Overwrite the downloaded file to the root directory of the Magento website and copy the “op_alipay” folder to the template path in use by the website. For example, app\design\frontend\template-name-in-use-by-the-website\ default\template\op_creditcard.
         </li>
         <li>The “images” folder also needs to be copied to the template path in use. For example, skin\frontend\template-name-in-use\default\images.
         </li>
@@ -32,7 +32,7 @@ Magento is a professional open source e-commerce system. Magento is designed to 
   </tr>
   <tr>
     <td>Pay Mode</td>
-    <td>Redirect:Redirect to open payment page<br>Iframe:iframe payment page.</td>
+    <td>Redirect:Redirect to open payment page.</td>
   </tr>
   <tr>
     <td>Account</td>
@@ -74,7 +74,7 @@ Magento is a professional open source e-commerce system. Magento is designed to 
   </tr>
   <tr>
     <td>Iframe Height(px)</td>
-    <td>750</td>
+    <td></td>
   </tr>
   <tr>
     <td>Send Order Email</td>
