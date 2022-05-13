@@ -5,6 +5,7 @@ Oceanpayment supports mainstream open-source payment plug-ins, such as Magento, 
 Magento is a professional open source e-commerce system. Magento is designed to be very flexible, with a modular architecture system and functions. It is easy to integrate seamlessly with third-party application systems. It is oriented to enterprise-level applications and can handle various needs and build a multi-purpose and applicable e-commerce website.
 <ul>
   <li>Supports Card Payments and Alternative Payments embedded plug-ins.</li>
+  <li>Support email sending.</li>
 </ul>
 <h4>Plug-in installation</h4>
 <ol>
