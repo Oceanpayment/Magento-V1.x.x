@@ -162,7 +162,7 @@ class Oceanpayment_OPAlipay_Model_Payment extends Mage_Payment_Model_Method_Abst
 		//securecode
 		$parameter['securecode']		= $this->getConfigData('securecode');
 		//支付方式
-		$parameter['methods']			= 'Alipay';
+		$parameter['methods']			= $this->Source();
 		//订单号
 		$parameter['order_number']		= $order->getRealOrderId();
 		//支付币种
@@ -238,6 +238,20 @@ class Oceanpayment_OPAlipay_Model_Payment extends Mage_Payment_Model_Method_Abst
 		
 		
 		return $parameter;
+    }
+
+	/**
+     * 判断终端来源
+     */
+    function Source(){
+        //是否移动端
+        if($this->isMobile()){           
+            //H5
+            return 'Alipay_Wap';                
+        }else{
+            //pc
+            return 'Alipay_Web';
+        }
     }
 
 	
