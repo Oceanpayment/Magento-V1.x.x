@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category	Oceampayment
+ * @package 	Oceanpayment_WeChatPay
+ */
+-->
+<config>
+    <modules>
+        <Oceanpayment_OPWeChatPay>
+            <version>1.6.0</version>
+        </Oceanpayment_OPWeChatPay>
+    </modules>
+    <global>
+		  <helpers>
+		  	   <opwechatpay>
+		  	   	   <class>Oceanpayment_OPWeChatPay_Helper</class>
+		  	   </opwechatpay>
+		  </helpers>	
+        <models>
+            <opwechatpay>
+                <class>Oceanpayment_OPWeChatPay_Model</class>
+                <resourceModel>opwechatpay_mysql4</resourceModel>
+            </opwechatpay>
+            <opwechatpay_mysql4>
+                <class>Oceanpayment_OPWeChatPay_Model_Mysql4</class>
+                <entities>
+                    <api_debug><table>opwechatpay_api_debug</table></api_debug>
+                </entities>
+            </opwechatpay_mysql4>
+        </models>
+        <resources>
+            <opwechatpay_setup>
+                <setup>
+                    <module>Oceanpayment_OPWeChatPay</module>
+                    <class>Oceanpayment_OPWeChatPay_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </opwechatpay_setup>
+            <opwechatpay_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </opwechatpay_write>
+            <opwechatpay_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </opwechatpay_read>
+        </resources>
+        <blocks>
+            <opwechatpay><class>Oceanpayment_OPWeChatPay_Block</class></opwechatpay>
+    	</blocks>
+        <payment>
+            <opwechatpay_payment>
+                <languages>
+                    <FR>
+                        <code>FR</code>
+                        <name>Français</name>
+                    </FR>
+                    <EN>
+                        <code>EN</code>
+                        <name>Anglais</name>
+                    </EN>
+                    <ES>
+                        <code>ES</code>
+                        <name>Espagnol</name>
+                    </ES>
+                    <DE>
+                        <code>DE</code>
+                        <name>Allemand</name>
+                    </DE>
+                    <IT>
+                        <code>IT</code>
+                        <name>Italien</name>
+                    </IT>
+                    <NL>
+                        <code>NL</code>
+                        <name>Néerlandais</name>
+                    </NL>
+                </languages>
+            </opwechatpay_payment>
+        </payment>
+    </global>
+    <frontend>
+        <secure_url>
+            <opwechatpay_payment>/opwechatpay/payment</opwechatpay_payment>
+        </secure_url>
+        <routers>
+            <opwechatpay>
+                <use>standard</use>
+                <args>
+                    <module>Oceanpayment_OPWeChatPay</module>
+                    <frontName>opwechatpay</frontName>
+                </args>
+            </opwechatpay>
+        </routers>
+        <translate>
+            <modules>
+                <Oceanpayment_OPWeChatPay>
+                    <files>
+                        <default>Oceanpayment_OPWeChatPay.csv</default>
+                    </files>
+                </Oceanpayment_OPWeChatPay>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <opwechatpay>
+                    <file>opwechatpay.xml</file>
+                </opwechatpay>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Oceanpayment_OPWeChatPay>
+                    <files>
+                        <default>Oceanpayment_OPWeChatPay.csv</default>
+                    </files>
+                </Oceanpayment_OPWeChatPay>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <payment>
+            <oceanpayment_wechatpay>
+                  <model>opwechatpay/payment</model>
+                  <title>WeChatPay</title>
+                  <allowspecific>0</allowspecific>
+                  <transaction_type>0</transaction_type>
+            </oceanpayment_wechatpay>
+        </payment>
+    </default>
+</config>
