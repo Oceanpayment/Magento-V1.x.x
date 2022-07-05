@@ -162,7 +162,7 @@ class Oceanpayment_OPWeChatPay_Model_Payment extends Mage_Payment_Model_Method_A
 		//securecode
 		$parameter['securecode']		= $this->getConfigData('securecode');
 		//支付方式
-		$parameter['methods']			= $this->Source();;
+		$parameter['methods']			= $this->Source();
 		//订单号
 		$parameter['order_number']		= $order->getRealOrderId();
 		//支付币种
