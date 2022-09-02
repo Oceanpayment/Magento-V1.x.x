@@ -186,28 +186,28 @@ class Oceanpayment_OPCreditCard_Model_Payment extends Mage_Payment_Model_Method_
 		//备注
 		$parameter['order_notes']		= $order->getRealOrderId();
 		//账单人名
-		$parameter['billing_firstName']	= $this->OceanHtmlSpecialChars($billing->getFirstname());
+		$parameter['billing_firstName']	        = substr(urlencode($this->OceanHtmlSpecialChars($billing->getFirstname())),0,50);
 		//账单人姓
-		$parameter['billing_lastName']	= $this->OceanHtmlSpecialChars($billing->getLastname());
+		$parameter['billing_lastName']	        = substr(urlencode($this->OceanHtmlSpecialChars($billing->getLastname())),0,50);
 		//账单人email
 		$parameter['billing_email']		= $this->OceanHtmlSpecialChars($order->getCustomerEmail());
 		//账单人电话
 		$parameter['billing_phone']		= $billing->getTelephone();
 		//账单人国家
-		$parameter['billing_country']	= $billing->getCountry();
+		$parameter['billing_country']	        = $billing->getCountry();
 		//账单人州(可不提交)
 		$parameter['billing_state']		= $billing->getRegionCode();
 		//账单人城市
 		$parameter['billing_city']		= $billing->getCity();
 		//账单人地址
-		$parameter['billing_address']	= $billing->getStreet(1);
+		$parameter['billing_address']	        = $billing->getStreet(1);
 		//账单人邮编
 		$parameter['billing_zip']		= $billing->getPostcode();
 		//收货人地址信息
 		//收货人名
-		$parameter['ship_firstName']	= $shipping->getFirstname();
+		$parameter['ship_firstName']	        = substr(urlencode($this->OceanHtmlSpecialChars($shipping->getFirstname())),0,50);
 		//收货人姓
-		$parameter['ship_lastName']		= $shipping->getLastname();
+		$parameter['ship_lastName']		= substr(urlencode($this->OceanHtmlSpecialChars($shipping->getLastname())),0,50);
 		//收货人手机
 		$parameter['ship_phone']		= $shipping->getTelephone();
 		//收货人国家
@@ -229,16 +229,16 @@ class Oceanpayment_OPCreditCard_Model_Payment extends Mage_Payment_Model_Method_
 		//产品单价
 		$parameter['productPrice']		= $productDetails['productPrice'];
 		//网店程序类型
-		$isMobile						= $this->isMobile() ? 'Mobile' : 'PC';
+		$isMobile				= $this->isMobile() ? 'Mobile' : 'PC';
 		$parameter['cart_info']			= 'Magento 1.x|V1.9.2|'.$isMobile;
 		//接口版本
 		$parameter['cart_api']			= '';
 		//校验源字符串
-		$signsrc						= $parameter['account'].$parameter['terminal'].$parameter['backUrl'].$parameter['order_number'].$parameter['order_currency'].$parameter['order_amount'].$parameter['billing_firstName'].$parameter['billing_lastName'].$parameter['billing_email'].$parameter['securecode'];
+		$signsrc				= $parameter['account'].$parameter['terminal'].$parameter['backUrl'].$parameter['order_number'].$parameter['order_currency'].$parameter['order_amount'].$parameter['billing_firstName'].$parameter['billing_lastName'].$parameter['billing_email'].$parameter['securecode'];
 		//sha256加密结果
 		$parameter['signValue']			= hash("sha256", $signsrc);
 		//支付页面类型
-		$parameter['pages']				= $this->isMobile() ? 1 : 0;
+		$parameter['pages']			= $this->isMobile() ? 1 : 0;
 		//支付页面语言，默认英语
 		$parameter['language']			= '';
 		//支付页面显示商户logo
