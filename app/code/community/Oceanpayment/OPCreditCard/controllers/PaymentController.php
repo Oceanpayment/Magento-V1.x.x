@@ -143,7 +143,6 @@ class Oceanpayment_OPCreditCard_PaymentController extends Mage_Core_Controller_F
 		$this->_order = Mage::getModel('sales/order');
 		$order   = $this->_order->loadByIncrementId($_REQUEST['order_number']);    //载入order模块
 		
-		sleep(15);
 		
 		//获取订单状态
 		$orderStatus = $order->getStatus();
