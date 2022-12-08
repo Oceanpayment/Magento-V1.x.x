@@ -1,0 +1,769 @@
+2022-12-08 08:29:08[Browser Return]
+response_type = 0
+account = 140105
+terminal = 140105100
+signValue = 71A75285AA828615D9D71D580016E9C7146BC849D440EBE14999D563D966AF4A
+methods = 
+order_number = 100000080
+order_currency = EUR
+order_amount = 205.00
+order_notes = 100000080
+card_number = 
+card_type = null
+payment_country = HK
+payment_id = 221208162857348010549
+payment_Method = 
+payment_authType = 0
+payment_status = 0
+payment_details = 50008:Transaction canceled by customer
+payment_solutions = 
+payment_risk = 
+payment_amount = null
+payment_exchangeRate = null
+pay_userId = null
+pay_barCode = 
+payment_bankInfo = 
+2022-12-08 08:28:57[Sent to Oceanpayment]
+order_currency = EUR
+order_amount = 205
+account = 140105
+terminal = 140105100
+securecode = 12345678
+order_number = 100000080
+backUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/return/
+noticeUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/notice/
+order_notes = 100000080
+billing_firstName = ming
+billing_lastName = xiao
+billing_email = 123456@qq.com
+billing_phone = 13666666666
+billing_country = DE
+billing_state = BER
+billing_city = shenzhen
+billing_address = zhonghualu1
+billing_zip = 12345
+ship_firstName = ming
+ship_lastName = xiao
+ship_phone = 13666666666
+ship_country = DE
+ship_state = BER
+ship_city = shenzhen
+ship_addr = zhonghualu1
+ship_zip = 12345
+productName = iPhone11测试
+productSku = 001
+productNum = 1
+productPrice = 200
+cart_info = Magento 1.x|V1.9.2|PC
+cart_api = 
+signValue = 8b76fd6d9ce46ab84e909c358c678fbc0633f971fc768faa90ed302067ca7cdd
+pages = 0
+language = 
+logoUrl = 
+itemList = {
+            "0":{
+                "type":"1",
+                "title":"iPhone11测试",
+                "sku":"001",
+                "price":"200",
+                "quantity":"1",
+                "total_amount":"200",
+                "taxRate":"0.01",
+                "taxPrice":"1.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "1":{
+                "type":"3",
+                "title":"折扣",
+                "sku":"001",
+                "price":"0",
+                "quantity":"0",
+                "total_amount":"0",
+                "taxRate":"0",
+                "taxPrice":"0",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "2":{
+                "type":"4",
+                "title":"运费",
+                "sku":"001",
+                "price":"5.0000",
+                "quantity":"1",
+                "total_amount":"5.0000",
+                "taxRate":"1",
+                "taxPrice":"5.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "3":{
+                "type":"5",
+                "title":"税费",
+                "sku":"001",
+                "price":"0.0000",
+                "quantity":"1",
+                "total_amount":"0.0000",
+                "taxRate":"1",
+                "taxPrice":"0.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            }
+        }
+*************************************
+2022-12-08 08:25:36[Browser Return]
+response_type = 0
+account = 140105
+terminal = 140105100
+signValue = 3280880D3B27C25EB3B1A76749FDD2E8D7F1475BC6F81EAD0534988A120B9CDE
+methods = 
+order_number = 100000079
+order_currency = USD
+order_amount = 221.50
+order_notes = 100000079
+card_number = 
+card_type = null
+payment_country = HK
+payment_id = 221208162535262010556
+payment_Method = 
+payment_authType = 0
+payment_status = 0
+payment_details = 20301:Payment method does not support the country or currency.
+payment_solutions = 
+payment_risk = 
+payment_amount = null
+payment_exchangeRate = null
+pay_userId = null
+pay_barCode = 
+payment_bankInfo = 
+2022-12-08 08:25:35[Sent to Oceanpayment]
+order_currency = USD
+order_amount = 221.5
+account = 140105
+terminal = 140105100
+securecode = 12345678
+order_number = 100000079
+backUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/return/
+noticeUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/notice/
+order_notes = 100000079
+billing_firstName = ming
+billing_lastName = xiao
+billing_email = 123456@qq.com
+billing_phone = 13666666666
+billing_country = US
+billing_state = CA
+billing_city = shenzhen
+billing_address = zhonghualu1
+billing_zip = 12345
+ship_firstName = ming
+ship_lastName = xiao
+ship_phone = 13666666666
+ship_country = US
+ship_state = CA
+ship_city = shenzhen
+ship_addr = zhonghualu1
+ship_zip = 12345
+productName = iPhone11测试
+productSku = 001
+productNum = 1
+productPrice = 200
+cart_info = Magento 1.x|V1.9.2|PC
+cart_api = 
+signValue = 4191c0ce8aeff8778b5545edd2acd6a8a964c8f4b6c80283d689041c49ae1090
+pages = 0
+language = 
+logoUrl = 
+itemList = {
+            "0":{
+                "type":"1",
+                "title":"iPhone11测试",
+                "sku":"001",
+                "price":"200",
+                "quantity":"1",
+                "total_amount":"200",
+                "taxRate":"0.01",
+                "taxPrice":"1.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "1":{
+                "type":"3",
+                "title":"折扣",
+                "sku":"001",
+                "price":"0",
+                "quantity":"0",
+                "total_amount":"0",
+                "taxRate":"0",
+                "taxPrice":"0",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "2":{
+                "type":"4",
+                "title":"运费",
+                "sku":"001",
+                "price":"5.0000",
+                "quantity":"1",
+                "total_amount":"5.0000",
+                "taxRate":"1",
+                "taxPrice":"5.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "3":{
+                "type":"5",
+                "title":"税费",
+                "sku":"001",
+                "price":"16.5000",
+                "quantity":"1",
+                "total_amount":"16.5000",
+                "taxRate":"1",
+                "taxPrice":"16.5000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            }
+        }
+*************************************
+2022-12-08 08:23:47[Browser Return]
+response_type = 0
+account = 140105
+terminal = 140105100
+signValue = 53B423A5213094F0B7EE9E389E61FD4B3C4A14FCB59ADEE333480E091AAD0C9F
+methods = 
+order_number = 100000078
+order_currency = USD
+order_amount = 221.50
+order_notes = 100000078
+card_number = 
+card_type = null
+payment_country = HK
+payment_id = 221208162337699010527
+payment_Method = 
+payment_authType = 0
+payment_status = 0
+payment_details = 50008:Transaction canceled by customer
+payment_solutions = 
+payment_risk = 
+payment_amount = null
+payment_exchangeRate = null
+pay_userId = null
+pay_barCode = 
+payment_bankInfo = 
+2022-12-08 08:23:36[Sent to Oceanpayment]
+order_currency = USD
+order_amount = 221.5
+account = 140105
+terminal = 140105100
+securecode = 12345678
+order_number = 100000078
+backUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/return/
+noticeUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/notice/
+order_notes = 100000078
+billing_firstName = ming
+billing_lastName = xiao
+billing_email = 123456@qq.com
+billing_phone = 13666666666
+billing_country = US
+billing_state = CA
+billing_city = shenzhen
+billing_address = zhonghualu1
+billing_zip = 12345
+ship_firstName = ming
+ship_lastName = xiao
+ship_phone = 13666666666
+ship_country = US
+ship_state = CA
+ship_city = shenzhen
+ship_addr = zhonghualu1
+ship_zip = 12345
+productName = iPhone11测试
+productSku = 001
+productNum = 1
+productPrice = 200
+cart_info = Magento 1.x|V1.9.2|PC
+cart_api = 
+signValue = 7805ac69ba2714c3fc9172510bbd96ae21bf49db97144420a5a1c866a3ea4b76
+pages = 0
+language = 
+logoUrl = 
+itemList = {
+            "0":{
+                "type":"1",
+                "title":"iPhone11测试",
+                "sku":"001",
+                "price":"200",
+                "quantity":"1",
+                "total_amount":"200",
+                "taxRate":"0.01",
+                "taxPrice":"1.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "1":{
+                "type":"3",
+                "title":"折扣",
+                "sku":"001",
+                "price":"0",
+                "quantity":"0",
+                "total_amount":"0",
+                "taxRate":"0",
+                "taxPrice":"0",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "2":{
+                "type":"4",
+                "title":"运费",
+                "sku":"001",
+                "price":"5.0000",
+                "quantity":"1",
+                "total_amount":"5.0000",
+                "taxRate":"1",
+                "taxPrice":"5.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "3":{
+                "type":"5",
+                "title":"税费",
+                "sku":"001",
+                "price":"16.5000",
+                "quantity":"1",
+                "total_amount":"16.5000",
+                "taxRate":"1",
+                "taxPrice":"16.5000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            }
+        }
+*************************************
+2022-12-08 08:12:14[Sent to Oceanpayment]
+order_currency = EUR
+order_amount = 205
+account = 995183
+terminal = 99518303
+securecode = 2b48z0Z40JD0N4dR06R66lX4j4x2df804NtlvhNZPV8t86lnZ2vHL068660r6d0j
+order_number = 100000077
+backUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/return/
+noticeUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/notice/
+order_notes = 100000077
+billing_firstName = ming
+billing_lastName = xiao
+billing_email = 123456@qq.com
+billing_phone = 13666666666
+billing_country = DE
+billing_state = BER
+billing_city = shenzhen
+billing_address = zhonghualu1
+billing_zip = 12345
+ship_firstName = ming
+ship_lastName = xiao
+ship_phone = 13666666666
+ship_country = DE
+ship_state = BER
+ship_city = shenzhen
+ship_addr = zhonghualu1
+ship_zip = 12345
+productName = iPhone11测试
+productSku = 001
+productNum = 1
+productPrice = 200
+cart_info = Magento 1.x|V1.9.2|PC
+cart_api = 
+signValue = cb915369962b4710813838ae635fbf5cadc4895065b36f934fe07bfab7e01a9e
+pages = 0
+language = 
+logoUrl = 
+itemList = {
+            "0":{
+                "type":"1",
+                "title":"iPhone11测试",
+                "sku":"001",
+                "price":"200",
+                "quantity":"1",
+                "total_amount":"200",
+                "taxRate":"0.01",
+                "taxPrice":"1.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "1":{
+                "type":"3",
+                "title":"折扣",
+                "sku":"001",
+                "price":"0",
+                "quantity":"0",
+                "total_amount":"0",
+                "taxRate":"0",
+                "taxPrice":"0",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "2":{
+                "type":"4",
+                "title":"运费",
+                "sku":"001",
+                "price":"5.0000",
+                "quantity":"1",
+                "total_amount":"5.0000",
+                "taxRate":"1",
+                "taxPrice":"5.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "3":{
+                "type":"5",
+                "title":"税费",
+                "sku":"001",
+                "price":"0.0000",
+                "quantity":"1",
+                "total_amount":"0.0000",
+                "taxRate":"1",
+                "taxPrice":"0.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            }
+        }
+*************************************
+2022-12-08 08:10:18[Sent to Oceanpayment]
+order_currency = EUR
+order_amount = 205
+account = 995183
+terminal = 99518303
+securecode = 2b48z0Z40JD0N4dR06R66lX4j4x2df804NtlvhNZPV8t86lnZ2vHL068660r6d0j
+order_number = 100000076
+backUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/return/
+noticeUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/notice/
+order_notes = 100000076
+billing_firstName = ming
+billing_lastName = xiao
+billing_email = 123456@qq.com
+billing_phone = 13666666666
+billing_country = DE
+billing_state = BER
+billing_city = shenzhen
+billing_address = zhonghualu1
+billing_zip = 12345
+ship_firstName = ming
+ship_lastName = xiao
+ship_phone = 13666666666
+ship_country = DE
+ship_state = BER
+ship_city = shenzhen
+ship_addr = zhonghualu1
+ship_zip = 12345
+productName = iPhone11测试
+productSku = 001
+productNum = 1
+productPrice = 200
+cart_info = Magento 1.x|V1.9.2|PC
+cart_api = 
+signValue = 009a092db6624e46039cf3aa17d6bee3da06b0e182b4d9bd95279be89d86f929
+pages = 0
+language = 
+logoUrl = 
+itemList = {
+            "0":{
+                "type":"1",
+                "title":"iPhone11测试",
+                "sku":"001",
+                "price":"200",
+                "quantity":"1",
+                "total_amount":"200",
+                "taxRate":"0.01",
+                "taxPrice":"1.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "1":{
+                "type":"3",
+                "title":"折扣",
+                "sku":"001",
+                "price":"0",
+                "quantity":"0",
+                "total_amount":"0",
+                "taxRate":"0",
+                "taxPrice":"0",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "2":{
+                "type":"4",
+                "title":"运费",
+                "sku":"001",
+                "price":"5.0000",
+                "quantity":"1",
+                "total_amount":"5.0000",
+                "taxRate":"1",
+                "taxPrice":"5.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "3":{
+                "type":"5",
+                "title":"税费",
+                "sku":"001",
+                "price":"0.0000",
+                "quantity":"1",
+                "total_amount":"0.0000",
+                "taxRate":"1",
+                "taxPrice":"0.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            }
+        }
+*************************************
+2022-12-08 08:02:50[Browser Return]
+response_type = 0
+account = 140105
+terminal = 140105100
+signValue = F7F8428555538BBBDBC1CB764F3C16C264DD0B29CE9EEB31B7DA97E2F391335C
+methods = 
+order_number = 100000075
+order_currency = EUR
+order_amount = 205.00
+order_notes = 100000075
+card_number = 
+card_type = null
+payment_country = HK
+payment_id = 221208160247427010537
+payment_Method = 
+payment_authType = 0
+payment_status = 0
+payment_details = 20301:Payment method does not support the country or currency.
+payment_solutions = 
+payment_risk = 
+payment_amount = null
+payment_exchangeRate = null
+pay_userId = null
+pay_barCode = 
+payment_bankInfo = 
+2022-12-08 08:02:46[Sent to Oceanpayment]
+order_currency = EUR
+order_amount = 205
+account = 140105
+terminal = 140105100
+securecode = 12345678
+order_number = 100000075
+backUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/return/
+noticeUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/notice/
+order_notes = 100000075
+billing_firstName = ming
+billing_lastName = xiao
+billing_email = 123456@qq.com
+billing_phone = 13666666666
+billing_country = DE
+billing_state = BER
+billing_city = shenzhen
+billing_address = zhonghualu1
+billing_zip = 12345
+ship_firstName = ming
+ship_lastName = xiao
+ship_phone = 13666666666
+ship_country = DE
+ship_state = BER
+ship_city = shenzhen
+ship_addr = zhonghualu1
+ship_zip = 12345
+productName = iPhone11测试
+productSku = 001
+productNum = 1
+productPrice = 200
+cart_info = Magento 1.x|V1.9.2|PC
+cart_api = 
+signValue = 10c73a609f69c9b9875b4ce18b7d17a4ed0c03e257879aea5069cffae2e68cb3
+pages = 0
+language = 
+logoUrl = 
+itemList = {
+            "0":{
+                "type":"1",
+                "title":"iPhone11测试",
+                "sku":"001",
+                "price":"200",
+                "quantity":"1",
+                "total_amount":"200",
+                "taxRate":"0.01",
+                "taxPrice":"1.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "1":{
+                "type":"3",
+                "title":"折扣",
+                "sku":"001",
+                "price":"0",
+                "quantity":"0",
+                "total_amount":"0",
+                "taxRate":"0",
+                "taxPrice":"0",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "2":{
+                "type":"4",
+                "title":"运费",
+                "sku":"001",
+                "price":"5.0000",
+                "quantity":"1",
+                "total_amount":"5.0000",
+                "taxRate":"1",
+                "taxPrice":"5.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "3":{
+                "type":"5",
+                "title":"税费",
+                "sku":"001",
+                "price":"0.0000",
+                "quantity":"1",
+                "total_amount":"0.0000",
+                "taxRate":"1",
+                "taxPrice":"0.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            }
+        }
+*************************************
+2022-12-08 07:56:53[Browser Return]
+response_type = 0
+account = 140105
+terminal = 140105100
+signValue = 441CCE433C6DB5300C84286C02704F78D05DA40025D2FB1A482C1FD415B3CD43
+methods = 
+order_number = 100000074
+order_currency = GBP
+order_amount = 205.00
+order_notes = 100000074
+card_number = 
+card_type = null
+payment_country = HK
+payment_id = 221208155651601010553
+payment_Method = 
+payment_authType = 0
+payment_status = 0
+payment_details = 20301:Payment method does not support the country or currency.
+payment_solutions = 
+payment_risk = 
+payment_amount = null
+payment_exchangeRate = null
+pay_userId = null
+pay_barCode = 
+payment_bankInfo = 
+2022-12-08 07:56:50[Sent to Oceanpayment]
+order_currency = GBP
+order_amount = 205
+account = 140105
+terminal = 140105100
+securecode = 12345678
+order_number = 100000074
+backUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/return/
+noticeUrl = http://127.0.0.1/magento1.9/index.php/opklarna/payment/notice/
+order_notes = 100000074
+billing_firstName = ming
+billing_lastName = xiao
+billing_email = 123456@qq.com
+billing_phone = 13666666666
+billing_country = CN
+billing_state = Guangdong
+billing_city = shenzhen
+billing_address = zhonghualu1
+billing_zip = 000000
+ship_firstName = ming
+ship_lastName = xiao
+ship_phone = 13666666666
+ship_country = CN
+ship_state = Guangdong
+ship_city = shenzhen
+ship_addr = zhonghualu1
+ship_zip = 000000
+productName = iPhone11测试
+productSku = 001
+productNum = 1
+productPrice = 200
+cart_info = Magento 1.x|V1.9.2|PC
+cart_api = 
+signValue = 542b17684f4069f2c49fa2eb3e71992ee9de2f8cb00df1fda369c8b5cec37717
+pages = 0
+language = 
+logoUrl = 
+itemList = {
+            "0":{
+                "type":"1",
+                "title":"iPhone11测试",
+                "sku":"001",
+                "price":"200",
+                "quantity":"1",
+                "total_amount":"200",
+                "taxRate":"0.01",
+                "taxPrice":"1.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "1":{
+                "type":"3",
+                "title":"折扣",
+                "sku":"001",
+                "price":"0",
+                "quantity":"0",
+                "total_amount":"0",
+                "taxRate":"0",
+                "taxPrice":"0",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "2":{
+                "type":"4",
+                "title":"运费",
+                "sku":"001",
+                "price":"5.0000",
+                "quantity":"1",
+                "total_amount":"5.0000",
+                "taxRate":"1",
+                "taxPrice":"5.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            },
+            "3":{
+                "type":"5",
+                "title":"税费",
+                "sku":"001",
+                "price":"0.0000",
+                "quantity":"1",
+                "total_amount":"0.0000",
+                "taxRate":"1",
+                "taxPrice":"0.0000",
+                "image_url":"",
+                "product_url":"",
+                "remark":""
+            }
+        }
+*************************************

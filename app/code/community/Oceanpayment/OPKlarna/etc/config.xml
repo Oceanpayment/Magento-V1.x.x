@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category	Oceampayment
+ * @package 	Oceanpayment_Klarna
+ * @copyright	Copyright (c) 2021 Oceanpayment,LLC. (http://www.oceampayment.com)
+ */
+-->
+<config>
+    <modules>
+        <Oceanpayment_OPKlarna>
+            <version>1.9.2</version>
+        </Oceanpayment_OPKlarna>
+    </modules>
+    <global>
+		  <helpers>
+		  	   <opklarna>
+		  	   	   <class>Oceanpayment_OPKlarna_Helper</class>
+		  	   </opklarna>
+		  </helpers>	
+        <models>
+            <opklarna>
+                <class>Oceanpayment_OPKlarna_Model</class>
+                <resourceModel>opklarna_mysql4</resourceModel>
+            </opklarna>
+            <opklarna_mysql4>
+                <class>Oceanpayment_OPKlarna_Model_Mysql4</class>
+                <entities>
+                    <api_debug><table>opklarna_api_debug</table></api_debug>
+                </entities>
+            </opklarna_mysql4>
+        </models>
+        <resources>
+            <opklarna_setup>
+                <setup>
+                    <module>Oceanpayment_OPKlarna</module>
+                    <class>Oceanpayment_OPKlarna_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </opklarna_setup>
+            <opklarna_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </opklarna_write>
+            <opklarna_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </opklarna_read>
+        </resources>
+        <blocks>
+            <opklarna><class>Oceanpayment_OPKlarna_Block</class></opklarna>
+    	</blocks>
+        <payment>
+            <opklarna_payment>
+                <languages>
+                    <FR>
+                        <code>FR</code>
+                        <name>Français</name>
+                    </FR>
+                    <EN>
+                        <code>EN</code>
+                        <name>Anglais</name>
+                    </EN>
+                    <ES>
+                        <code>ES</code>
+                        <name>Espagnol</name>
+                    </ES>
+                    <DE>
+                        <code>DE</code>
+                        <name>Allemand</name>
+                    </DE>
+                    <IT>
+                        <code>IT</code>
+                        <name>Italien</name>
+                    </IT>
+                    <NL>
+                        <code>NL</code>
+                        <name>Néerlandais</name>
+                    </NL>
+                </languages>
+            </opklarna_payment>
+        </payment>
+    </global>
+    <frontend>
+        <secure_url>
+            <opklarna_payment>/opklarna/payment</opklarna_payment>
+        </secure_url>
+        <routers>
+            <opklarna>
+                <use>standard</use>
+                <args>
+                    <module>Oceanpayment_OPKlarna</module>
+                    <frontName>opklarna</frontName>
+                </args>
+            </opklarna>
+        </routers>
+        <translate>
+            <modules>
+                <Oceanpayment_OPKlarna>
+                    <files>
+                        <default>Oceanpayment_OPKlarna.csv</default>
+                    </files>
+                </Oceanpayment_OPKlarna>
+            </modules>
+        </translate>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Oceanpayment_OPKlarna>
+                    <files>
+                        <default>Oceanpayment_OPKlarna.csv</default>
+                    </files>
+                </Oceanpayment_OPKlarna>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <payment>
+            <oceanpayment_klarna>
+                  <model>opklarna/payment</model>
+                  <title>Klarna</title>
+                  <allowspecific>0</allowspecific>
+                  <transaction_type>0</transaction_type>
+                  <order_status>pending</order_status>
+                  <order_status_payment_accepted>processing</order_status_payment_accepted>
+                  <order_status_payment_refused>pending</order_status_payment_refused>
+                  <order_status_payment_pending>processing</order_status_payment_pending>
+                  <order_status_payment_risk>pending</order_status_payment_risk>
+                  <iframe_height>800</iframe_height>
+                  <send_email>1</send_email>
+                  <automatic_invoice>1</automatic_invoice>
+            </oceanpayment_klarna>
+        </payment>
+    </default>
+</config>
