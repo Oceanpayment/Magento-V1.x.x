@@ -222,7 +222,7 @@ class Oceanpayment_OPKlarna_Model_Payment extends Mage_Payment_Model_Method_Abst
 		//产品名称
 		$parameter['productName']		= $productDetails['productName'];
 		//产品SKU
-		$parameter['productSku']		= $productDetails['productSku'];
+		$parameter['productSku']		= substr($productDetails['productSku'],0,500);
 		//产品数量
 		$parameter['productNum']		= $productDetails['productNum'];
 		//产品单价
@@ -248,7 +248,7 @@ class Oceanpayment_OPKlarna_Model_Payment extends Mage_Payment_Model_Method_Abst
             "0":{
                 "type":"1",
                 "title":"'.substr($parameter["productName"], 0, 100).'",
-                "sku":"'.$parameter["productSku"].'",
+                "sku":"'.substr($parameter["productSku"], 0, 100).'",
                 "price":"'.($order->grand_total-$order->shipping_amount-$order->tax_amount).'",
                 "quantity":"1",
                 "total_amount":"'.($order->grand_total-$order->shipping_amount-$order->tax_amount).'",
@@ -261,7 +261,7 @@ class Oceanpayment_OPKlarna_Model_Payment extends Mage_Payment_Model_Method_Abst
             "1":{
                 "type":"3",
                 "title":"折扣",
-                "sku":"'.$parameter["productSku"].'",
+                "sku":"'.substr($parameter["productSku"], 0, 100).'",
                 "price":"0",
                 "quantity":"0",
                 "total_amount":"0",
@@ -274,7 +274,7 @@ class Oceanpayment_OPKlarna_Model_Payment extends Mage_Payment_Model_Method_Abst
             "2":{
                 "type":"4",
                 "title":"运费",
-                "sku":"'.$parameter["productSku"].'",
+                "sku":"'.substr($parameter["productSku"], 0, 100).'",
                 "price":"'.$order->shipping_amount.'",
                 "quantity":"1",
                 "total_amount":"'.$order->shipping_amount.'",
@@ -287,7 +287,7 @@ class Oceanpayment_OPKlarna_Model_Payment extends Mage_Payment_Model_Method_Abst
             "3":{
                 "type":"5",
                 "title":"税费",
-                "sku":"'.$parameter["productSku"].'",
+                "sku":"'.substr($parameter["productSku"], 0, 100).'",
                 "price":"'.$order->tax_amount.'",
                 "quantity":"1",
                 "total_amount":"'.$order->tax_amount.'",
