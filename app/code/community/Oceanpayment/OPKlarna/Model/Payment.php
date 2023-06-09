@@ -247,8 +247,8 @@ class Oceanpayment_OPKlarna_Model_Payment extends Mage_Payment_Model_Method_Abst
         $parameter['itemList'] = '{
             "0":{
                 "type":"1",
-                "title":"'.substr($parameter["productName"], 0, 100).'",
-                "sku":"'.substr($parameter["productSku"], 0, 100).'",
+                "title":"'.$this->OceanHtmlSpecialChars(substr($parameter["productName"], 0, 100)).'",
+                "sku":"'.$this->OceanHtmlSpecialChars(substr($parameter["productSku"], 0, 100)).'",
                 "price":"'.($order->grand_total-$order->shipping_amount-$order->tax_amount).'",
                 "quantity":"1",
                 "total_amount":"'.($order->grand_total-$order->shipping_amount-$order->tax_amount).'",
@@ -261,7 +261,7 @@ class Oceanpayment_OPKlarna_Model_Payment extends Mage_Payment_Model_Method_Abst
             "1":{
                 "type":"3",
                 "title":"折扣",
-                "sku":"'.substr($parameter["productSku"], 0, 100).'",
+                "sku":"'.$this->OceanHtmlSpecialChars(substr($parameter["productSku"], 0, 100)).'",
                 "price":"0",
                 "quantity":"0",
                 "total_amount":"0",
@@ -274,7 +274,7 @@ class Oceanpayment_OPKlarna_Model_Payment extends Mage_Payment_Model_Method_Abst
             "2":{
                 "type":"4",
                 "title":"运费",
-                "sku":"'.substr($parameter["productSku"], 0, 100).'",
+                "sku":"'.$this->OceanHtmlSpecialChars(substr($parameter["productSku"], 0, 100)).'",
                 "price":"'.$order->shipping_amount.'",
                 "quantity":"1",
                 "total_amount":"'.$order->shipping_amount.'",
@@ -287,7 +287,7 @@ class Oceanpayment_OPKlarna_Model_Payment extends Mage_Payment_Model_Method_Abst
             "3":{
                 "type":"5",
                 "title":"税费",
-                "sku":"'.substr($parameter["productSku"], 0, 100).'",
+                "sku":"'.$this->OceanHtmlSpecialChars(substr($parameter["productSku"], 0, 100)).'",
                 "price":"'.$order->tax_amount.'",
                 "quantity":"1",
                 "total_amount":"'.$order->tax_amount.'",
