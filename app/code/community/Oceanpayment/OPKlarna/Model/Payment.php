@@ -614,7 +614,7 @@ class Oceanpayment_OPKlarna_Model_Payment extends Mage_Payment_Model_Method_Abst
 		$parameter = trim($parameter);
 
 		//转义"双引号,<小于号,>大于号,'单引号
-		$parameter = str_replace(array("<",">","'","\""),array("&lt;","&gt;","&#039;","&quot;"),$parameter);
+		$parameter = str_replace(array("<",">","'","\""),array("","","",""),$parameter);
 		
 		return $parameter;
 
