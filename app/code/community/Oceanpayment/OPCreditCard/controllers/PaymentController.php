@@ -172,19 +172,19 @@ class Oceanpayment_OPCreditCard_PaymentController extends Mage_Core_Controller_F
 					$model->getConfigData('order_status_payment_accepted'),
 					Mage::helper('opcreditcard')->__(self::PUSH.$authType.'Payment Success!'.$history), true);
 						
-					// //发送邮件
-					// if($model->getConfigData('send_email') == 1){
-					// 	if(!in_array($orderStatus, $this->_processingArray)){
-					// 		$order->sendNewOrderEmail();	
-					// 	}
-					// }
+					//发送邮件
+					if($model->getConfigData('send_email') == 1){
+						if(in_array($orderStatus, $this->_processingArray)){
+							$order->sendNewOrderEmail();	
+						}
+					}
 
-					// //自动Invoice
-					// if($model->getConfigData('automatic_invoice') == 1){		
-					// 	if(!in_array($orderStatus, $this->_processingArray)){
-					// 		$this->saveInvoice($order);
-					// 	}
-					// }
+					//自动Invoice
+					if($model->getConfigData('automatic_invoice') == 1){		
+						if(in_array($orderStatus, $this->_processingArray)){
+							$this->saveInvoice($order);
+						}
+					}
 					
 					$order->save();
 					break;
@@ -264,20 +264,6 @@ class Oceanpayment_OPCreditCard_PaymentController extends Mage_Core_Controller_F
 				$order->addStatusToHistory(
 				$model->getConfigData('order_status_payment_accepted'),
 				Mage::helper('opcreditcard')->__(self::BrowserReturn.'Payment Success!'.$history), true);	
-		
-				//发送邮件
-				if($model->getConfigData('send_email') == 1){
-					if(!in_array($orderStatus, $this->_processingArray)){
-						$order->sendNewOrderEmail();	
-					}
-				}
-
-				//自动Invoice
-				if($model->getConfigData('automatic_invoice') == 1){		
-					if(!in_array($orderStatus, $this->_processingArray)){
-						$this->saveInvoice($order);
-					}
-				}
 				
 				$order->save();
 				$url = 'opcreditcard/payment/success';
