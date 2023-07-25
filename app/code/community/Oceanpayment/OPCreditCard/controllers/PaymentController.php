@@ -181,9 +181,9 @@ class Oceanpayment_OPCreditCard_PaymentController extends Mage_Core_Controller_F
 
 					//自动Invoice
 					if($model->getConfigData('automatic_invoice') == 1){		
-						if(in_array($orderStatus, $this->_processingArray)){
+						
 							$this->saveInvoice($order);
-						}
+						
 					}
 					
 					$order->save();
