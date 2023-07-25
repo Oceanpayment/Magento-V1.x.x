@@ -174,9 +174,9 @@ class Oceanpayment_OPCreditCard_PaymentController extends Mage_Core_Controller_F
 						
 					//发送邮件
 					if($model->getConfigData('send_email') == 1){
-						if(in_array($orderStatus, $this->_processingArray)){
+						
 							$order->sendNewOrderEmail();	
-						}
+						
 					}
 
 					//自动Invoice
